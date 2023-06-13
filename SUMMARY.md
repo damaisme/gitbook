@@ -5,3 +5,6 @@
   * [Deployment Topology Scenario](manual-deployment-openstack-ha-and-integrate-with-ceph/deployment-topology-scenario.md)
   * [Pre-Deployment](manual-deployment-openstack-ha-and-integrate-with-ceph/pre-deployment.md)
   * [Manual Deployment Ceph Quincy Cluster](manual-deployment-openstack-ha-and-integrate-with-ceph/manual-deployment-ceph-quincy-cluster.md)
+  * [Setup keyring for openstack service](manual-deployment-openstack-ha-and-integrate-with-ceph/setup-keyring-for-openstack-service.md)
+  * [Setup Galera Cluster](manual-deployment-openstack-ha-and-integrate-with-ceph/setup-galera-cluster.md)
+  * [Setup Rabbitmq Cluster](manual-deployment-openstack-ha-and-integrate-with-ceph/setup-rabbitmq-cluster.md)
