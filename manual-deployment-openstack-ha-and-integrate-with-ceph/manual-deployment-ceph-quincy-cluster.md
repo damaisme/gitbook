@@ -37,7 +37,7 @@ auth service required = cephx
 auth client required = cephx
 EOF
 	
-# Distribusikan ceph.conf
+# Distribute ceph.conf
 scp /etc/ceph/ceph.conf os-controller-01:/etc/ceph/ceph.conf
 scp /etc/ceph/ceph.conf os-controller-02:/etc/ceph/ceph.conf
 scp /etc/ceph/ceph.conf os-controller-03:/etc/ceph/ceph.conf
