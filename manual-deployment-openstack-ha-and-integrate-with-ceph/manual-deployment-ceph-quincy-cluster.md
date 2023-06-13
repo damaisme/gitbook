@@ -17,7 +17,7 @@ ceph cluster network =  10.40.40.0/24
 sudo apt install -y ceph
 ```
 
-## Setting Up the Ceph Configuration **(Exec on controller-1 only )**
+## Setting Up the Ceph Configuration **(Exec on controller-1 only)**
 
 1. Create ceph configuration file
 
