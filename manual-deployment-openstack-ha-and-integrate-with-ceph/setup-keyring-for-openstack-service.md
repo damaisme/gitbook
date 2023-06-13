@@ -1,6 +1,11 @@
+---
+description: >-
+  In OpenStack, keyrings are used to authenticate OpenStack components that
+  interact with Ceph. Cinder and Glance require keyrings to access and manage
+  block and image storage in the Ceph cluster.
+---
+
 # Setup keyring for openstack service
-
-
 
 1. Create osd pool
 
