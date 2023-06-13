@@ -1,5 +1,7 @@
 # Setup keyring for openstack service
 
+
+
 1. Create osd pool
 
 ```
