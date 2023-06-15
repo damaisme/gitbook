@@ -8,3 +8,6 @@
   * [Setup keyring for openstack service](manual-deployment-openstack-ha-and-integrate-with-ceph/setup-keyring-for-openstack-service.md)
   * [Setup Galera Cluster](manual-deployment-openstack-ha-and-integrate-with-ceph/setup-galera-cluster.md)
   * [Setup Rabbitmq Cluster](manual-deployment-openstack-ha-and-integrate-with-ceph/setup-rabbitmq-cluster.md)
+  * [Setup Memcached](manual-deployment-openstack-ha-and-integrate-with-ceph/setup-memcached.md)
+  * [Setup HAproxy](manual-deployment-openstack-ha-and-integrate-with-ceph/setup-haproxy.md)
+  * [Setup Pacemaker Cluster](manual-deployment-openstack-ha-and-integrate-with-ceph/setup-pacemaker-cluster.md)
