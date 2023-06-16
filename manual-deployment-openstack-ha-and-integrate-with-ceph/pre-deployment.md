@@ -1,6 +1,6 @@
 # Pre-Deployment
 
-## Exec on all controller
+## Exec on all nodes
 
 1. Set hosts file
 
