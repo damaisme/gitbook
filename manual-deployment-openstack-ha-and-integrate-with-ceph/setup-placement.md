@@ -113,6 +113,7 @@ sed -i "s/Listen 8778.*/Listen $(ip -4 addr show ens4 | grep -oP '(?<=inet\\s)\\
 
 ```
 vi /etc/haproxy/haproxy.cfg
+...
 # PLACEMENT
  listen placement_internal_api_cluster
   bind 10.10.10.100:8778

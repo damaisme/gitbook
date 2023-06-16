@@ -17,4 +17,8 @@
   * [Setup Cinder on Controller](manual-deployment-openstack-ha-and-integrate-with-ceph/setup-cinder-on-controller.md)
   * [Setup Cinder on Compute](manual-deployment-openstack-ha-and-integrate-with-ceph/setup-cinder-on-compute.md)
   * [Setup Placement](manual-deployment-openstack-ha-and-integrate-with-ceph/setup-placement.md)
+  * [Setup Nova on Controller](manual-deployment-openstack-ha-and-integrate-with-ceph/setup-nova-on-controller.md)
+  * [Setup Nova on Compute](manual-deployment-openstack-ha-and-integrate-with-ceph/setup-nova-on-compute.md)
+  * [Setup Neutron on Controller](manual-deployment-openstack-ha-and-integrate-with-ceph/setup-neutron-on-controller.md)
+  * [Setup Neutron on Compute](manual-deployment-openstack-ha-and-integrate-with-ceph/setup-neutron-on-compute.md)
   * [Remove warning cryptography openstack client](manual-deployment-openstack-ha-and-integrate-with-ceph/remove-warning-cryptography-openstack-client.md)
