@@ -16,4 +16,5 @@
   * [Create ceph libvirt secret](manual-deployment-openstack-ha-and-integrate-with-ceph/create-ceph-libvirt-secret.md)
   * [Setup Cinder on Controller](manual-deployment-openstack-ha-and-integrate-with-ceph/setup-cinder-on-controller.md)
   * [Setup Cinder on Compute](manual-deployment-openstack-ha-and-integrate-with-ceph/setup-cinder-on-compute.md)
+  * [Setup Placement](manual-deployment-openstack-ha-and-integrate-with-ceph/setup-placement.md)
   * [Remove warning cryptography openstack client](manual-deployment-openstack-ha-and-integrate-with-ceph/remove-warning-cryptography-openstack-client.md)
