@@ -2,7 +2,7 @@
 
 <figure><img src="../.gitbook/assets/openstack client warning.png" alt=""><figcaption></figcaption></figure>
 
-Resolution: Downgrade cryptography python package < 3.4
+Solution: Downgrade cryptography python package < 3.4
 
 ```bash
 apt install python3-pip
