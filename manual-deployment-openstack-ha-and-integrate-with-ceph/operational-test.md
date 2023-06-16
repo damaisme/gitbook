@@ -53,13 +53,13 @@ openstack image create --disk-format qcow2 --container-format bare \
   --public --file ./bionic-server-cloudimg-amd64.img ubuntu-bionic
 ```
 
-#### Create flavor
+#### Create Flavor
 
 ```html
 openstack flavor create --ram 2048 --disk 10 --vcpus 2 --public ram2-cpu2
 ```
 
-#### Create keypair
+#### Create Keypair
 
 ```html
 openstack keypair create --public-key ~/.ssh/id_rsa.pub controller-key
@@ -92,15 +92,13 @@ openstack floating ip create provider1-net --floating-ip-address 50.50.50.10
 openstack server add floating ip ubuntu-test 50.50.50.10
 ```
 
-**List Server**
+#### **List Server**
 
 ```
 openstack server list
 ```
 
-
-
-**Test SSH to Instance**
+#### **Test SSH to Instance**
 
 ```
 ssh 50.50.50.10 -l ubuntu

@@ -23,4 +23,5 @@
   * [Setup Neutron on Compute](manual-deployment-openstack-ha-and-integrate-with-ceph/setup-neutron-on-compute.md)
   * [Setup Horizon Dashboard](manual-deployment-openstack-ha-and-integrate-with-ceph/setup-horizon-dashboard.md)
   * [Operational Test](manual-deployment-openstack-ha-and-integrate-with-ceph/operational-test.md)
-  * [Remove warning cryptography openstack client](manual-deployment-openstack-ha-and-integrate-with-ceph/remove-warning-cryptography-openstack-client.md)
+  * [Tshoot: Remove warning cryptography openstack client](manual-deployment-openstack-ha-and-integrate-with-ceph/tshoot-remove-warning-cryptography-openstack-client.md)
+  * [Tshoot: Too many connection mariadb](manual-deployment-openstack-ha-and-integrate-with-ceph/tshoot-too-many-connection-mariadb.md)

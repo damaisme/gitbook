@@ -58,6 +58,60 @@ openstack endpoint create --region java \
 
 
 
+## Setup Haproxy for Neutron service (Exec on all controller nodes)
+
+1. Add haproxy configuration
+
+```
+vi /etc/haproxy/haproxy.cfg
+
+# NEUTRON
+listen neutron_api_cluster
+  bind 10.10.10.100:9696
+  bind 202.10.10.100:9696
+  balance  source
+  option  tcpka
+  option  httpchk
+  option  tcplog
+    server os-controller-01 10.10.10.11:9696 maxconn 4000 check inter 2000 rise 2 fall 5
+    server os-controller-02 10.10.10.12:9696 maxconn 4000 check inter 2000 rise 2 fall 5 backup
+    server os-controller-03 10.10.10.13:9696 maxconn 4000 check inter 2000 rise 2 fall 5 backup
+
+
+#OVN-REMOTE VIP
+frontend ovn_northbound_ovsdb
+  bind 10.10.10.100:6641
+  default_backend be_ovn_northbound_ovsdb
+  mode tcp
+backend be_ovn_northbound_ovsdb
+  balance leastconn
+  mode tcp
+  option tcp-check
+    server lab-r01-oscontroller-01 10.10.10.11:6641 check inter 2000 rise 2 fall 5
+    server lab-r02-oscontroller-02 10.10.10.12:6641 check inter 2000 rise 2 fall 5
+    server lab-r03-oscontroller-03 10.10.10.13:6641 check inter 2000 rise 2 fall 5
+
+frontend ovn_southbound_ovsdb
+  bind 10.10.10.100:6642
+  default_backend be_ovn_southbound_ovsdb
+  mode tcp
+backend be_ovn_southbound_ovsdb
+  balance leastconn
+  mode tcp
+  option tcp-check
+    server lab-r01-oscontroller-01 10.10.10.11:6642 check inter 2000 rise 2 fall 5
+    server lab-r02-oscontroller-02 10.10.10.12:6642 check inter 2000 rise 2 fall 5
+    server lab-r03-oscontroller-03 10.10.10.13:6642 check inter 2000 rise 2 fall 5
+```
+
+## Restart Haproxy with Pacemaker (Exec on controller-01)
+
+```
+pcs resource restart lb-haproxy
+```
+
+
+
 ## Clustering OVN (Exec on all controller nodes)
 
 1. Install neutron packages
@@ -127,9 +181,6 @@ systemctl status ovn-central
     --ovn-northd-sb-db=tcp:10.10.10.11:6642,tcp:10.10.10.12:6642,tcp:10.10.10.13:6642
     EOF
     ```
-
-
-
 4. Backup and delete original DB
 
 ```html
@@ -256,51 +307,6 @@ ovn_metadata_enabled = true
 enable_distributed_floating_ip = false
 ```
 
-3. Add haproxy configuration
-
-```
-vi /etc/haproxy/haproxy.cfg
-
-# NEUTRON
-listen neutron_api_cluster
-  bind 10.10.10.100:9696
-  bind 202.10.10.100:9696
-  balance  source
-  option  tcpka
-  option  httpchk
-  option  tcplog
-    server os-controller-01 10.10.10.11:9696 maxconn 4000 check inter 2000 rise 2 fall 5
-    server os-controller-02 10.10.10.12:9696 maxconn 4000 check inter 2000 rise 2 fall 5 backup
-    server os-controller-03 10.10.10.13:9696 maxconn 4000 check inter 2000 rise 2 fall 5 backup
-
-
-#OVN-REMOTE VIP
-frontend ovn_northbound_ovsdb
-  bind 10.10.10.100:6641
-  default_backend be_ovn_northbound_ovsdb
-  mode tcp
-backend be_ovn_northbound_ovsdb
-  balance leastconn
-  mode tcp
-  option tcp-check
-    server lab-r01-oscontroller-01 10.10.10.11:6641 check inter 2000 rise 2 fall 5
-    server lab-r02-oscontroller-02 10.10.10.12:6641 check inter 2000 rise 2 fall 5
-    server lab-r03-oscontroller-03 10.10.10.13:6641 check inter 2000 rise 2 fall 5
-
-frontend ovn_southbound_ovsdb
-  bind 10.10.10.100:6642
-  default_backend be_ovn_southbound_ovsdb
-  mode tcp
-backend be_ovn_southbound_ovsdb
-  balance leastconn
-  mode tcp
-  option tcp-check
-    server lab-r01-oscontroller-01 10.10.10.11:6642 check inter 2000 rise 2 fall 5
-    server lab-r02-oscontroller-02 10.10.10.12:6642 check inter 2000 rise 2 fall 5
-    server lab-r03-oscontroller-03 10.10.10.13:6642 check inter 2000 rise 2 fall 5
-
-```
-
 ## Populate and Sync Neutron Database (exec on controller -01)
 
 1. Populate neutron database
@@ -352,11 +358,7 @@ systemctl enable neutron-server
 systemctl status neutron-server
 ```
 
-## Restart Haproxy with Pacemaker (Exec on controller-01)
-
-```
-pcs resource restart lb-haproxy
-```
+##
 
 ## Verify network ovn-controller on OpenStack
 
