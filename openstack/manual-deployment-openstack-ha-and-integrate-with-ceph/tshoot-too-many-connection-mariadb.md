@@ -1,6 +1,6 @@
 # Tshoot: Too many connection mariadb
 
-<figure><img src="../.gitbook/assets/mariadb-too-many.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/mariadb-too-many.png" alt=""><figcaption></figcaption></figure>
 
 **Cause:** mysql has a max\_connection variable where connections to mysql cannot exceed the value of the variable.
 

@@ -4,7 +4,7 @@
 
 ## Toplogy
 
-<figure><img src="../.gitbook/assets/OS-TOPO.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/OS-TOPO.png" alt=""><figcaption></figcaption></figure>
 
 ## Version
 

@@ -216,11 +216,11 @@ ceph config set mon auth_allow_insecure_global_id_reclaim false
 
 1. Ceph status
 
-<figure><img src="../.gitbook/assets/ceph-status.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ceph-status.png" alt=""><figcaption></figcaption></figure>
 
 2. Ceph osd tree
 
-<figure><img src="../.gitbook/assets/ceph-osd tree.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/ceph-osd tree.png" alt=""><figcaption></figcaption></figure>
 
 Ref:
 

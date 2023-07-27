@@ -1,6 +1,6 @@
 # Tshoot: Remove warning cryptography openstack client
 
-<figure><img src="../.gitbook/assets/openstack client warning.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/openstack client warning.png" alt=""><figcaption></figcaption></figure>
 
 Solution: Downgrade cryptography python package < 3.4
 

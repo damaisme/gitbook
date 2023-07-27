@@ -8,7 +8,7 @@ I'm **Damasukma Trihanandi**, a cloud engineer. On this page I wrote my engineer
 
 [<mark style="color:purple;">📌</mark>](https://emojiguide.com/objects/pushpin/) <mark style="color:purple;">**Pinned Topic**</mark>&#x20;
 
-[manual-deployment-openstack-ha-and-integrate-with-ceph](manual-deployment-openstack-ha-and-integrate-with-ceph/ "mention")
+[manual-deployment-openstack-ha-and-integrate-with-ceph](openstack/manual-deployment-openstack-ha-and-integrate-with-ceph/ "mention")
 
 
 
